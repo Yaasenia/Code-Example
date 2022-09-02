@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class Main {
+   public static void printIntro() { //Intro statement - does not repeat
+      System.out.println("Hello! My name is Yesenia!");
+      System.out.println("My major is Computer Science");
+   }
+   
+   public static void printMenu() { //Menu Statement to repeat after each selection except 5
+      System.out.println("Please enter a number");
+      System.out.println("    1) What is Yesenia's dream job?");
+      System.out.println("    2) How will Yesenia reach her goals?");
+      System.out.println("    3) What jobs exactly is Yesenia going to get?");
+      System.out.println("    4) What will be Yesenia's greatest challenge in her journey?");
+      System.out.println("    5) End program.\n");
+   }
+   
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in); 
+      boolean quit = false; 
+      int choice; //collect user input
+      
+      printIntro();
+      
+      //determines output with user input, reprints menu unless choice is quit
+      while (!quit) {
+         printMenu();
+         choice = scnr.nextInt();
+         System.out.print(“ANSWER: “);	       
+
+      if (choice == 5) {
+         System.out.println("Goodbye");
+         quit = true;
+         }
+      else {
+         if (choice ==1) {
+         System.out.println("My dream job is a software developer. "); 
+      }
+         
+      else if (choice == 2) {
+         System.out.println("I will reach my goals by staying consistent in school and reaching out for help when needed. I will also reach my goals by getting a tutor.");
+      }
+      else if (choice == 3) {
+         System.out.println("The job I am looking to get are software developer, software engineer and application developer.");
+      }
+      else if (choice == 4) {
+         System.out.println("My greatest challenge in this journey will be asking for help when I need it. I tend to try to avoid asking for help but I believe I can overcome this, so I am able to better understand each subject.");
+      }
+         System.out.println();
+      } 
+   }
+} 
+}
